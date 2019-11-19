@@ -1,6 +1,6 @@
 var authHeader = require('../../lib/parsers/authHeader');
 
-describe('Parsing Authentication Header', function() {
+describe('Authentication Header Parser', function() {
     it('Should parse single-space', function() {
         // Arrange
         var token = '0123456789abcdef';
