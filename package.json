@@ -1,5 +1,5 @@
 {
-    "name": "@mertcanyalhi/express-auth-token",
+    "name": "express-auth-token",
     "version": "0.0.1",
     "description": "JSON Web Token authentication middleware for Express",
     "main": "./lib",
