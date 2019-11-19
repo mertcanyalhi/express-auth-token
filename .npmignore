@@ -5,3 +5,8 @@ npm-debug.log
 
 # Mac OS X
 .DS_Store
+
+# Others
+.travis.yml
+test/
+coverage/

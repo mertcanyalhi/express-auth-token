@@ -1,43 +1,45 @@
 {
-  "name": "@mertcanyalhi/express-auth-token",
-  "version": "0.0.1",
-  "description": "JSON Web Token authentication middleware for Express",
-  "main": "./lib",
-  "scripts": {
-    "test": "make test"
-  },
-  "engines": {
-    "node": ">= 0.4.0"
-  },
-  "dependencies": {
-    "jsonwebtoken": "8.x.x"
-  },
-  "devDependencies": {
-    "make-node": "0.4.6",
-    "mocha": "6.2.2",
-    "chai": "4.2.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+github.com/mertcanyalhi/express-auth-token.git"
-  },
-  "keywords": [
-    "Express",
-    "JSON",
-    "Web",
-    "Token",
-    "Authentication",
-    "Auth",
-    "JWT"
-  ],
-  "author": {
-      "name": "Mert Can Yalhi",
-      "email": "mert@mert.co",
-      "url": "http://mert.co"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mertcanyalhi/express-auth-token/issues"
-  },
-  "homepage": "https://github.com/mertcanyalhi/express-auth-token#readme"
+    "name": "@mertcanyalhi/express-auth-token",
+    "version": "0.0.1",
+    "description": "JSON Web Token authentication middleware for Express",
+    "main": "./lib",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha --reporter spec --require test/bootstrap test/*.test.js test/**/*.test.js",
+        "testcov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec --require test/bootstrap test/*test.js test/**/*.test.js"
+    },
+    "engines": {
+        "node": ">= 0.4.0"
+    },
+    "dependencies": {
+        "jsonwebtoken": "8.x.x"
+    },
+    "devDependencies": {
+        "mocha": "^6.2.2",
+        "chai": "^4.2.0",
+        "istanbul": "^0.4.5",
+        "sinon": "^7.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+github.com/mertcanyalhi/express-auth-token.git"
+    },
+    "keywords": [
+        "Express",
+        "JSON",
+        "Web",
+        "Token",
+        "Authentication",
+        "Auth",
+        "JWT"
+    ],
+    "author": {
+        "name": "Mert Can Yalhi",
+        "email": "mert@mert.co",
+        "url": "http://mert.co"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mertcanyalhi/express-auth-token/issues"
+    },
+    "homepage": "https://github.com/mertcanyalhi/express-auth-token#readme"
 }
