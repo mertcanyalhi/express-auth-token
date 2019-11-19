@@ -227,7 +227,7 @@ To generate test-coverage reports:
 
 ```sh
 npm install -g istanbul
-npm run-script testcov
+npm run-script coverage
 istanbul report
 ```
 
