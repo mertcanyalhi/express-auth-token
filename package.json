@@ -5,7 +5,8 @@
     "main": "./lib",
     "scripts": {
         "test": "./node_modules/.bin/mocha --reporter spec --require test/bootstrap test/*.test.js test/**/*.test.js",
-        "testcov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec --require test/bootstrap test/*test.js test/**/*.test.js"
+        "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --reporter spec --require test/bootstrap test/*test.js test/**/*.test.js",
+        "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
     },
     "engines": {
         "node": ">= 0.4.0"
@@ -14,9 +15,11 @@
         "jsonwebtoken": "8.x.x"
     },
     "devDependencies": {
-        "mocha": "^6.2.2",
         "chai": "^4.2.0",
+        "coveralls": "^3.0.7",
         "istanbul": "^0.4.5",
+        "mocha": "^6.2.2",
+        "mocha-lcov-reporter": "^1.3.0",
         "sinon": "^7.5.0"
     },
     "repository": {
