@@ -93,7 +93,7 @@ app.use(expressAuthToken.init({
     secret: 'VerySecretKey',
     failureCallback: function(req, res, next) {
         res.json({
-            status: false,
+            success: false,
             error: req.auth.error
         });
     }
@@ -153,7 +153,8 @@ A custom callback can be defined for the failed requests:
 ```javascript
 app.get('/private', expressAuthToken.authenticate(function(req, res, next) {
     res.json({
-        message: 'Access denied!'
+        success: false,
+        error: 'Access denied!'
     });
 }));
 ```
@@ -169,7 +170,8 @@ A custom callback can be defined for the failed requests:
 ```javascript
 app.get('/private', expressAuthToken.authorize('administrator', function(req, res, next) {
     res.json({
-        message: 'Access denied!'
+        success: false,
+        error: 'You are not an admin!'
     });
 }));
 ```
