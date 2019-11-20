@@ -43,6 +43,17 @@ npm install express-auth-token
   - If the `rolesKey` option is set, corresponding key in the token data should contain an array of roles.
   - If the `userKey` option is set, corresponding key in the token data should contain the user information (user id/username/etc.).
 
+**Error codes:**
+
+- Error codes will be set within the `req.auth.error` property.
+- express-auth-token will return the following error codes:
+  - **TokenNotSet**: Token was not found within the request by using the defined token parser.
+  - **NotAuthenticated**: User was not authenticated (in case if `authenticate` middleware is used).
+  - **NotAuthorized**: User was not authorized (in case if `authorize` middleware is used).
+  - **TokenExpiredError**: (Inherited from JWT) Thrown if the token is expired.
+  - **JsonWebTokenError**: (Inherited from JWT) Could not validate the token.
+  - **NotBeforeError**: (Inherited from JWT) Thrown if current time is before the nbf claim.
+
 Including the library:
 
 ```javascript
