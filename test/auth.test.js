@@ -703,7 +703,10 @@ describe('Auth.authenticate', function() {
         var spyStatus = sinon.spy();
         var context = {};
         var mockReq = {
-            isAuthenticated: false
+            isAuthenticated: false,
+            auth: {
+                error: null
+            }
         };
         var mockRes = {
             status: spyStatus
